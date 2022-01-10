@@ -178,9 +178,11 @@ if (isset($_GET['logout'])) {
         <div class="col-lg-6 ms-lg-5">
           <h4 class="text-white">Job 1</h4>
           <h1 class="text-white">Adrian Trif</h1>
-          <button type="button" class="btn btn-secondary btn-sm me-1 mb-0">Downloadeaza CV</button>
+          <a href="upload/AdrianTrifMRLL.pdf" download>
+          <button type="button" class="btn btn-secondary btn-sm me-1 mb-0" href="upload/AdrianTrifMRLL.pdf" download>Downloadeaza CV</button>
+          </a>
           <br><br>
-          <a href="aplica.html" class="text-white icon-move-right">
+          <a href="modificastatus.php" class="text-white icon-move-right">
             Modifica Status
             <i class="fas fa-arrow-right text-sm ms-1"></i>
           </a>
@@ -197,9 +199,10 @@ if (isset($_GET['logout'])) {
         <div class="col-lg-6 ms-lg-5">
           <h4 class="text-white">Job 2</h4>
           <h1 class="text-white">Razvan Roman</h1>
-          <button type="button" class="btn btn-secondary btn-sm me-1 mb-0">Downloadeaza CV</button>
-          <br><br>
-          <a href="aplica.html" class="text-white icon-move-right">
+          <a href="upload/AdrianTrifMRLL.pdf" download>
+          <button type="button" class="btn btn-secondary btn-sm me-1 mb-0" href="upload/AdrianTrifMRLL.pdf" download>Downloadeaza CV</button>
+          </a><br><br>
+          <a href="modificastatus1.php" class="text-white icon-move-right">
             Modifica Status
             <i class="fas fa-arrow-right text-sm ms-1"></i>
           </a>

@@ -36,7 +36,7 @@ if (isset($_GET['logout'])) {
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<link rel="stylesheet" href="css.css">
 <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
 <link rel="icon" type="image/png" href="./assets/img/favicon.png">
 
@@ -57,7 +57,7 @@ if (isset($_GET['logout'])) {
 
 <!-- Font Awesome Icons -->
 <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-
+<!-- <script src="https://use.fontawesome.com/c47bc38e87.js"></script> -->
 <!-- Material Icons -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 
@@ -153,7 +153,26 @@ if (isset($_GET['logout'])) {
     <div class="container">
       <div class="row">
         <div class="col-lg-6 ms-lg-5">
-         
+        <div class="container">
+        <h1 class="text-white">Job 1 title</h1>
+        <br><br>
+  <div class="progress2">
+    <div class="progress-track2"></div>
+    <div id="step1" class="progress-step2">
+      Aplicare
+    </div>
+    <div id="step2" class="progress-step2">
+      Interviu
+    </div>
+    <div id="step3" class="progress-step2">
+      Oferta
+    </div>
+    <div id="step4" class="progress-step2" >
+      Angajare
+    </div>
+  </div>
+</div>
+<script src="javascript1.js"></script>
       </div>
   </div>
 </div>

@@ -153,8 +153,9 @@ if (isset($_POST['reg_admin'])) {
     }
     
   }
+  error_reporting(0);
 $statusMsg = '';
-$targetDir = "C:/xampp/htdocs/JobRectuitmentSystem/pages/upload/";
+$targetDir = realpath(dirname(getcwd()));
 $fileName = basename($_FILES["file"]["name"]);
 $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
@@ -169,6 +170,7 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
             $insert = $db->query("INSERT into aplicari (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
             if($insert){
                 $statusMsg = "The file ".$fileName. " has been uploaded successfully.";
+                header('location: ../index.php');
             }else{
                 $statusMsg = "File upload failed, please try again.";
             } 
@@ -181,5 +183,23 @@ if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
 }else{
     $statusMsg = 'Please select a file to upload.';
 }
-echo $statusMsg;
-?>
+
+
+if (isset($_POST['reg_status'])) {
+  // receive all input values from the form
+  $status1 = mysqli_real_escape_string($db, $_POST['status1']);
+  $nume = $_SESSION['email'];
+  // by adding (array_push()) corresponding error unto $errors array
+  if (empty($status)) { array_push($errors, "Status is required"); }
+  if (empty($nume)) { array_push($errors, "Name is required"); }
+
+  // Finally, register user if there are no errors in the form
+  if (count($errors) == 0) {
+    $password = $password;
+    $query = "INSERT INTO statuss (status1, nume) 
+                  VALUES('$status1', '$nume')";
+    mysqli_query($db, $query);
+    header('location: ./admin.php');
+  }
+  
+}

@@ -109,7 +109,7 @@ if (isset($_GET['logout'])) {
   <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
     Landing Pages
   </h6>
-  <a href="./pages/aplicari.html" class="dropdown-item border-radius-md">
+  <a href="./aplicari.php" class="dropdown-item border-radius-md">
     <span>Aplicari</span>
   </a>
 </div>

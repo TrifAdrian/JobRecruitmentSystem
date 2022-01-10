@@ -29,22 +29,10 @@ if (isset($_GET['logout'])) {
     include("./pages/sign-in.php");
 } 
 ?> 
+
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 
 <head>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -54,10 +42,7 @@ if (isset($_GET['logout'])) {
 
 <title>
   
-
-  
   Job Recruitment System
-
   
 </title>
 
@@ -65,7 +50,7 @@ if (isset($_GET['logout'])) {
 
 <!--     Fonts and icons     -->
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
-
+<link rel="stylesheet" href="css.css">
 <!-- Nucleo Icons -->
 <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
 <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
@@ -168,22 +153,37 @@ if (isset($_GET['logout'])) {
     <div class="container">
       <div class="row">
         <div class="col-lg-6 ms-lg-5">
-          <h1 class="text-white">Job 1 title</h1>
-          <p class="lead text-white opacity-8">Descriere<br><br>
-            Importa CV
-                <div class="col-12 mx-auto">
-                <form action="./pages/server.php" method="post" enctype="multipart/form-data">
-                <input type="file" id="file" name="file">
-                <input type="submit" name="submit" value="Upload">
-                    <!-- <input type="file" name="file"><br><br>
-                    <input href="aplica.php" type="submit" name="aplica" class="text-white icon-move-right">
-                            Aplica
-                      <i class="fas fa-arrow-right text-sm ms-1"></i>
-                    </input> -->
-                  <!-- </div> -->
-                </form>
+        <h1 class="text-white">Adrian Trif</h1>
+        <br><br>
+        <form method="post" action="modificastatus.php" class="text-start">
+              <?php include('errors.php'); ?>
+              <div class="progress2">
+                <div class="progress-track2"></div>
+                <div id="stepp1" name="stepp1" value="stepp1"class="progress-step2">
+                  Aplicare
+                </div>
+                <div id="stepp2" name="stepp2" value="stepp2" class="progress-step2">
+                  Interviu
+                </div>
+                <div id="stepp3" name="stepp3" value="stepp3" class="progress-step2">
+                  Oferta
+                </div>
+                <div id="stepp4" name="stepp4" value="stepp4" class="progress-step2" >
+                  Angajare
                 </div>
               </div>
+              <br>
+            <br>
+  <button type="button" class="btn btn-secondary btn-sm me-1 mb-0" style="float: right" onClick=next()>Next Step</button>
+  <br><br>
+  <a type="submit" value="Register" name="reg_status" id="reg_status" class="text-white icon-move-right">
+            Modifica Status
+            <i class="fas fa-arrow-right text-sm ms-1"></i>
+          </a>
+</div>
+</form>
+<script src="javascript.js"></script>
+      </div>
   </div>
 </div>
 </div>
@@ -227,13 +227,6 @@ if (isset($_GET['logout'])) {
 <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
 <script src="./assets/js/plugins/parallax.min.js"></script>
 
-<!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
-<!--  Google Maps Plugin    -->
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-<script src="./assets/js/material-kit.min.js?v=3.0.0" type="text/javascript"></script>
-
-
 <script type="text/javascript">
 
   if (document.getElementById('state1')) {
@@ -261,26 +254,6 @@ if (isset($_GET['logout'])) {
     };
   }
 </script>
-
-
-
-  
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!--   Core JS Files   -->
